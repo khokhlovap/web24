@@ -57,9 +57,9 @@ body {
 }
 
 .btn:hover {
-    background-color: rgb(245, 0, 143);
+    background-color: rgb(179, 9, 108);
     color: rgb(255, 255, 255);
-    border-color: rgb(245, 0, 143);
+    border-color: rgb(179, 9, 108);
 }
 
 .sogl {
