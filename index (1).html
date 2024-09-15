@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма обратной связи</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cabin&family=Dancing+Script&family=Fuggles&family=Heebo:wght@300&family=Kanit:wght@300&family=Roboto+Condensed:wght@700&family=Roboto:wght@300&family=Rubik&family=Skranji&family=Work+Sans:wght@300&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+    <h1 class="form-header">Форма обратной связи</h1>
+    <div class="container">
+        <form action="https://httpbin.org/post" method="post" enctype="multipart/form-data">
+            <div class="form-group textt">
+                <label for="fio">ФИО</label><br>
+                <input class="coll" type="text" id="fio" name="fio" required placeholder="Введите ФИО">
+            </div>
+            <div class="form-group textt">
+                <label for="email">Email</label><br>
+                <input class="coll" type="email" id="email" name="email" required placeholder="Введите email">
+            </div>
+
+            <div class="form-group textt">
+                <label for="list">Категория обращения</label><br>
+                <select class="coll" id="list" name="list">
+                    <option value="positive">Благодарность</option>
+                    <option value="negative">Жалоба</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Как вы узнали о нас?</label><br>
+                <input type="radio" name="source" id="adv" required value="adv">
+                <label for="adv">Реклама</label>
+                <input type="radio" name="source" id="friends" required value="friends">
+                <label for="friends">Друзья</label>
+                <input type="radio" name="source" id="tv" required value="tv">
+                <label class="textt" for="tv">ТВ</label>
+            </div>
+
+            <div class="form-group textt">
+                <label>Текст сообщения</label><br>
+                <textarea class="text2 coll" name="massage" id="massage" required
+                    placeholder="Пишите сообщение сюда"></textarea>
+            </div>
+
+
+            <div class="form-group textt">
+                <label>Вложение</label><br>
+                <input type="file" name="file" id="file" class="choose">
+            </div>
+
+            <div class="form-group textt">
+                <input type="checkbox" name="agree" id="agree" required="required">
+                <label class="sogl" for="agree">Даю согласие на обработку персональных данных</label>
+            </div>
+
+            <p><input class="btn" type="submit" value="Отправить"></p>
+        </form>
+    </div>
+
+</body>
+
+</html>
